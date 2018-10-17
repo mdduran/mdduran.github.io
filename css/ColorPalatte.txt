@@ -1,0 +1,5 @@
+#9895BC : Light Purple
+#4F4D69 : Dark Purple
+#5C6D75 : Green
+#9CA9C0 : Wild Blue Yonder
+#313644 : Onyx

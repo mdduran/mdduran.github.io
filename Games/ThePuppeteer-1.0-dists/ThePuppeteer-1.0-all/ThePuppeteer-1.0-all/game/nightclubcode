@@ -1,0 +1,344 @@
+                                            scene bg nightclub
+                                            show bryant normal at offscreenleft
+                                            show gangster normal at center
+                                            show bryant normal at left with move
+                                            
+                                            e “Oh geez, this has to be the shadiest place I’ve ever unwillingly visited in my entire average life.”
+                                            g "Hey, what do you want?"
+                                            
+                                            label nightclubmenu12:
+                                                menu:
+                                                    "Leave":
+                                                        e "Uh, um, I’ll just be leaving, then…"
+                                                        g "Right out, brutha. Peace, dawg."
+                                                        jump map2
+                                                    "Ask for drugs":
+                                                        jump nightclub_22
+                                                    "Repremand them":
+                                                        jump nightclub_32
+                                                    "Pretend to be a cop":
+                                                        jump nightclub_42
+                                                    "Ask to talk to their boss":
+                                                        jump nightclub_62
+                                                    
+                                            label nightclub_22:
+                                                e "Hey, uh, you got any drugs?"
+                                                g "Woa, dog, drugs ain’t cool."
+
+                                                g "Yeah man, Don’t dey burn your brain and shit? Unhealthy shit, man."
+
+                                                e "Oh, right. Sorry for asking."
+
+                                                g "Treatin us like a coupla dealers, fool. No respect."
+                                                jump nightclubmenu12
+                                                
+                                            label nightclub_32:
+                                                e "Look at yourselves. Can’t you think of anything better to do than play “gangster” and cause suffering for your own selfish gain?"
+
+                                                g "Woa, dog, don’t you be judging us."
+
+                                                Yeah, man, I gotta get some money for my momma’s operation, or she’s wasted bro!"
+
+                                                g "And my sister, dude, she’s coughin and weezin up a storm back home,"
+                                                g "You sayin we should sit tight while our family’s at deaths door bro? You sayin you wouldn’t man up and do whatever you needed to do for yo family? Huh?"
+
+                                                e "Oh, geez, I didn’t know. Sorry."
+
+                                                g "Ha, we just messin with you. All for the cash."
+
+                                                g "Yeah, all for the cash, brutha. Rakin in the dough, make it rain, hollaatcha, ya know?"
+
+                                                "…"
+
+                                                g "Ha, spud don’t know. Little puss if I ever saw one, and I saw plenty, let me tell ya."
+
+                                                g "Haha, you tell him, man."
+                                                jump nightclubmenu12
+                                                                            
+                                            label nightclub_42:
+                                                e "I want to talk to your boss."
+
+                                                If(hats < 2):
+                                                    g "The boss? He don’t want to waste his time on creeps like you."
+
+                                                    e "What, he’s scared of me even before he meets me? Coward ain’t worth my time, then."
+                                                    show magicianblue at offscreenright
+                                                    show magicianblue at right with move
+
+                                                    m3 "Not worth your time, am I?"
+
+                                                    e “Oh, shit!”
+
+                                                    g "Boss! We don’t know this guy, he just came in askin for you."
+
+                                                    m3 "I can see that. He must be here for something very important, to have the balls to insult me on my own territory. Well, kid, what do ya want?"
+
+                                                    e "Oh, er, um I-"
+                                                    menu:
+                                                        "Leave":
+                                                            e "I’ll just be leaving, then?"
+
+                                                            m3 "You think you can insult the next great Capone and get away with it? Waste him, boys."
+
+                                                            e “Aw, shiiiiiiiii-”
+                                                            pause
+                                                            scene bg death
+                                                            pause
+                                                            jump choice0_done
+                                                        "Ask to be his personal assassin":
+                                                            jump nightclub_4_22
+                                                        "Punch him":
+                                                            jump nightclub_4_32
+                                                        "Compliment him":
+                                                            jump nightclub_4_32
+                                                        "Tell him you're an undercover cop":
+                                                            jump nightclub_4_52
+                                                                      
+                                                elif(hats==3):
+                                                    g "Sorry, bro. That voodoo priest dude high tailed it outa here after you pulled off those mad jukes, bro."
+                                                    g "Ol Capone came back, but he ain’t feelin so hot after the full fiasco, you know what I’m sayin?"
+
+                                                    e "Yeah, anyone would be sick after dealing with those wizards."
+
+                                                    g "You got it, bro."
+                                                    jump nightclubmenu12
+                                                else:
+                                                    jump nightclub_52
+
+
+                                                    label nightclub_4_22:
+                                                        $ assassin = 1
+                                                        e "I’ve come to be your personal assassin."
+
+                                                        m3 "Eh? You want to be my hit man?"
+                                                        m3 "Well, you do look pretty average… No one would suspect a guy like you of being a stone cold killer."
+
+                                                        e "Yeah, hehe, uh…"
+
+                                                        m3 "Tell ya what: you prove yourself with an easy hit, and I’ll forgive your cheek: whack that annoying ass hobo I keep seein pandering on the streets."
+
+                                                        e "Eh? You mean that ungrateful sob who treats you like shit if you don’t give over everything you got?"
+
+                                                        m3 "Yeah, that’s the one. Make it clean, too; get him gone, and don’t leave a trace. Coulda just walked outa town, cops wouldn’t know any better."
+
+                                                        e "Right, discreetly kill a hobo and I’ll earn your trust."
+                                                        e “I never thought I’d ever be actually saying that, but here I am.”
+
+                                                        m3 "Hehe, you got some spunk kid. Now go show me some discretion."
+                                                        
+                                                        show magicianblue at offscreenright with move
+
+                                                        e “Oh, hey, I’m alive. How bout that.”
+
+                                                        g "You got lucky, kid; not many get away so lightly with insultin the boss."
+
+                                                        e "Won’t happen again."
+
+                                                        g "Damn right."
+                                                        
+                                                        jump nightclubmenu12
+
+
+
+
+                                                    label nightclub_4_32:
+                                                        e "I think we should all just calm down, and settle our differences with a peaceful discus-"
+                                                        show bryant punch at left
+
+                                                        m3 "Never bring a fist to a gunfight, kid. Waste him, boys!"
+                                                        show gangster animated at center
+                                                        "Well, this sucks..."
+                                                        pause
+                                                        scene bg death
+                                                        pause
+                                                        jump choice0_done
+
+
+
+                                                    label nightclub_4_42:
+                                                        e "Uhhh, yer lookin pretty cool, actually. Going for the whole Capone thing, right?"
+
+                                                        m3 "Yeah, got these duds a few weeks ago. Felt like I had a business based on his style, why not imitate the guy, right? He was an inspiration."
+
+                                                        e "Yeah… it suits you."
+
+                                                        m3 "Thank you. It’s nice to see new kids that have heard of the glorious Capone. You know what, I ain’t gonna kill ya, kid. I’ll be the bigger man this time."
+
+                                                        e "Gee, thanks."
+
+                                                        m3 "Enjoy yerself."
+                                                        show magicianblue at offscreenright with move
+
+                                                        e “Wow, I’m alive after accidentally insulting a mob boss.”
+                                                        e “Now, moving on to leaving this nightclub alive.”
+                                                        jump nightclubmenu12
+
+
+
+
+                                                    label nightclub_4_52:
+                                                        e "Hold it right there, “boss”. I’m actually a cop, and we’ve been lookin for you for a looong time."
+
+                                                        "…"
+
+                                                        "…"
+
+                                                        e "That’s right, you’re all busted. Just hand over your weapons, and I’ll-"
+                                                        show gangster animated at center
+                                                        pause
+                                                        scene bg death
+                                                        pause
+                                                        jump choice0_done
+
+
+
+
+
+
+
+
+
+
+
+
+                                            label nightclub_52:
+                                                    g "The boss? Talkin bout the “new boss”?"
+
+                                                    e "Eh? New boss?"
+
+                                                    g "Yeah man, he came outa nowhere and declared himself the new king, or something."
+                                                    g "Knocked the old boss out cold with voodoo magic or some shit, man. Freaky shit."
+
+                                                    e "He sounds like the guy I want."
+
+                                                    g "Really? You must have balls of steel man, cuz he’s wack."
+
+                                                    show magicianblue at offscreenright
+                                                    show magicianblue at right with move
+
+                                                    m3 "See, what are you boys yammerin about, see?"
+
+                                                    g "Oh, shit! Boss! We didn’t mean nothing!"
+
+                                                    m3 "Damn right, ya didn’t, see? And don’t you boys worry, I ain’t here for you, see?"
+                                                    m3 "I’m here for that guy der, see?"
+
+                                                    e "You knew I was coming?"
+
+                                                    m3 "I could feel the power, see? The power of the hats is no joke kid, see? You stick out like a sore thumb, see?"
+                                                    
+                                                    e "What are you doing here? This place doesn’t seem very magician-like."
+
+                                                    m3 "I figure yer all wastin yer time, playin around by yourselves, see? Since domination spells like the one you got don’t work, see, I figure I’ll just control ya the good ol fashin way, see, with intimidation and threat of force, see?"
+
+                                                    e "Why do you keep saying see?"
+
+                                                    m3 "Cuz I’m a boss now, see? I’ve read up on your dialect, see, blend right in, don’t I, see?"
+
+                                                    e "What, you watched a bunch of classic mobster movies or something?"
+
+                                                    m3 "… Shut up, see?"
+
+                                                    e "Whatever. I came for your hat, which you can probably tell by now."
+
+                                                    m3 "I see, see? Think you can just wipe out all us magicians and get away with it, eh, see?"
+
+                                                    e "What? No, I just asked them for their hats and they had me pass a test for-"
+
+                                                    m3 "I ain’t fallin for it, see? Probably knocked ‘em out cold when they weren’t lookin, see? Us magicians are most vulnerable to physical violence, see?"
+                                                    e "Uh, so is everyone else."
+
+                                                    m3 "Of course, see? So that means you are too, see?"
+                                                    m3 "And you’re here in MY new domain, see? With my new armed henchmen here to protect me, see?"
+
+                                                    e "… Now that you mention it…"
+
+                                                    m3 "See, see? You were foolish to come here, mortal, see?"
+                                                    m3 "Now, boy, prepare to die, see?!? Get him, boys, see!?!"
+                                                    show gangster animated at center
+
+                                                    “OH SHIIII-”
+
+                                                    "*Dodging bullets*"
+                                                    show gangster angry at center
+
+                                                    e "…Oh, hey, I’m alive."
+
+                                                    g "Oh, shit boss! He just pulled some matrix shit!"
+                                                    g "Woa, he’s showin more mojo than you do!"
+
+                                                    m3 "…Just a fluke, see? I was goin easy on him, see?"
+
+                                                    g "Eh, boss, we were the ones shootin-"
+
+                                                    m3 "Well shoot again, see?!? Keep doin it till you run out of ammo, see!?!"
+
+                                                    show gangster animated at center
+                                                    "*Dodging even more bullets*"
+                                                    show gangster normal at center
+
+                                                    m3 "Wow, that was pretty badass."
+                                                    m3 "…see."
+
+                                                    e "Yeah, can you, like, stop shooting me?"
+
+                                                    g "Uh, priest guy, we’re all outa ammo!"
+
+                                                    m3 "…"
+                                                    m3 "So, what did you want again, mortal? I suppose I’ll deign to hear you out."
+
+                                                    e "Your hat. That curse is lethal, so I need your hat to reverse it."
+
+                                                    m3 "Oh, right, I suppose it did have that side effect."
+                                                    m3 "… Uh, I suppose, uh, I’m generous enough, erm, to comply with your request."
+                                                    $ hat += 1
+                                                    m3 "And, uh, actually, I was just planning on leaving, see? Uhhh…"
+
+                                                    e "Long as I have your hat, I don’t care anymore."
+                                                    e "Actually; where’s the last guy? The one with the red hat?"
+
+                                                    m3 "Eh, him? He’s always down by the cemetery, practicing new spells and such."
+
+                                                    e "Right. I’ll just punch him in the face or something while he’s casting, get the last hat, and reverse this shitty curse."
+                                                    e "Oh, you can go now if you want, I guess."
+
+                                                    m3 "… Right, then."
+                                                    m3 "… mortals are actually pretty scary…"
+                                                    show magicianblue at offscreenright with move
+
+                                                    e "And you guys?"
+
+                                                    g "Woah, dog, you Neo or some shit, we ain’t gonna mess with you."
+                                                    g "Yeah, man, those were some sweet moves, brah."
+
+                                                    e "Oh, all “cool” now after unloading all your ammo at me eh?"
+
+                                                    g "Ay man, he was threatenin us with all his voodoo shit, man, cut us some slack."
+                                                    g "Yeah, now that you scared him off we’re Capone’s crew again, wherever he is."
+                                                    g "Voodoo guy gave him a nasty ass cold, brutha. Sick shit, literally."
+                                                    
+                                                    e "Well, enjoy yourselves I guess. I’m going to go home and have a nervous breakdown about what just happened."
+                                                    
+                                                    g "Peace out, dog."
+                                                    g "Yeah, come back anytime. We’ll hang with ya."
+
+                                                    e "Yeah… maybe."
+                                                    jump apartmentn2
+
+
+
+
+                                            label nightclub_62:
+                                                    e "Hold it, “dawgs”, I’m an undercover cop!"
+                                                    e "You’re all under arrest! Drop your weapons and put your hands in the a-"
+
+                                                    show gangster animated at center
+                                                    pause
+                                                    scene bg death
+                                                    pause
+                                                    jump choice0_done
+
+
+                                                                            
+
+                                                

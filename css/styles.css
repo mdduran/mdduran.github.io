@@ -1,0 +1,434 @@
+body {
+    background-color: #75877B;
+    border-top: solid 10px #75877B;
+    color: #767187;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #767187;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 4em;
+}
+
+p {
+    color: #333;
+    font-family: sans-serif;
+}
+
+.container {
+    border-radius: 10px;
+    /*border: 10px solid transparent;
+   
+    border-image: url("images/border.png") 50% round;*/
+    /*-webkit-border-image: url("images/border.png") 50% round;  Safari 3.1-5 */
+    /*-o-border-image: url("images/border.png") 50% round; */
+    /* Opera 11-12.1 */
+    border-image: url("images/border.png") 50% round;
+    border-image-width: 0 40px 0 40px;
+    border-image-slice: 0 5px 0 30px;
+    background-color: #c8c8c8;
+    color: #9eb8af;
+    border-image-repeat: repeat;
+    border-color: #75877B;
+    padding: 20px 40px 30px 40px;
+    position: center;
+}
+
+.container h1 {}
+
+.video-container {
+    border-radius: 10px;
+    border: 10px;
+    border-image: url("images/border.png") 50% round;
+    -webkit-border-image: url("images/border.png") 50% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url("images/border.png") 50% round;
+    /* Opera 11-12.1 */
+    /*border-image: url("images/border.png") 50% round;*/
+    border-image-width: 0 10px 0 10px;
+    border-image-slice: 0 5px 0 30px;
+    background-color: #1D2B28;
+    border-image-repeat: repeat;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#border {
+    background-color: #9EB8AF;
+    border-image-source: url(images/border.png);
+    border-image: url(images/border.png) 50% round;
+    -webkit-border-image: url(images/border.png) 50% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(images/border.png) 50% round;
+    /* Opera 11-12.1 */
+}
+
+.trailer-container {
+    border: 10px;
+    width: 970px;
+    height: 510px;
+    padding: 0px;
+    border-radius: 10px;
+    background-color: #5C6D75;
+    box-sizing: content-box;
+}
+
+.container.h1 {
+    color: #9895BC;
+    /*font-family: fantasy;*/
+    font-weight: 200;
+    font-size: 200%;
+}
+
+button {
+    height: 38%;
+    border: thick;
+    border-radius: 8px;
+    background-color: #767187;
+    color: #c8c8c8;
+}
+
+.navbar-nav {
+    height: 38%;
+    border: thick;
+    border-radius: 8px;
+    background-color: #767187;
+    color: #c8c8c8;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    height: 38%;
+    border: thin;
+    border-radius: 8px;
+    background-color: #c8c8c8 !important;
+    color: #583449 !important;
+}
+
+.navbar-inverse .navbar-nav {
+    border-radius: 8px !important;
+}
+
+.nav-collapse {
+    background-color: #9EB8AF;
+    color: #583449;
+}
+
+.navbar-brand {
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    color: #c8c8c8;
+    font-size: 4em;
+    background-color: #9EB8AF;
+    outline: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+.navbar-header {
+    background-color: #9EB8AF;
+}
+
+.navbar-header h1 {
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    color: #767187;
+}
+
+.nav>li {}
+
+#navbar {
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    font-size: 150%;
+    padding-top: 100px;
+    border-radius: 8px;
+    align-items: flex-start;
+    background-color: #9EB8AF;
+}
+
+#navbar li active {
+    height: 38%;
+    border: thick;
+    border-radius: 8px;
+    background-color: #9EB8AF;
+    color: #583449;
+}
+
+
+/*
+.content-wrapper {
+        background-color: #583449;
+        color: #583449;
+        top:40px;
+        position:fixed;
+        top:50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right:1040px;
+        padding-left: 260px;
+        width:100%;
+}
+*/
+
+li active {
+    background-color: #583449;
+    color: #583449;
+}
+
+
+/* menu
+----------------------------------------------------------*/
+
+ul#menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+    text-align: right;
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+    padding-left: 15px;
+}
+
+ul#menu li a {
+    background: none;
+    color: #654354;
+    text-decoration: none;
+}
+
+ul#menu li a:hover {
+    color: #AD8C7D;
+    text-decoration: none;
+}
+
+
+/* games wrapper*/
+
+.games {
+    background-color: #9EB8AF;
+    padding: 175px;
+}
+
+.games .content-wrapper {
+    background-color: #c8c8c8;
+    background-image: -ms-linear-gradient(left, #c8c8c8 0%, #c8c8c8 100%);
+    background-image: -o-linear-gradient(left, #c8c8c8 0%, #c8c8c8 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #c8c8c8), color-stop(1, #c8c8c8));
+    background-image: -webkit-linear-gradient(left, #c8c8c8 0%, #c8c8c8 100%);
+    background-image: linear-gradient(left, #c8c8c8 0%, #c8c8c8 100%);
+    color: #999;
+    padding: 50px 40px 30px 40px;
+}
+
+.games hgroup.title.h1,
+.games hgroup.title h2 {
+    color: #999;
+}
+
+.games p {
+    color: #000;
+    font-size: 1.2em;
+}
+
+.quickfind .content-wrapper {
+    color: #75877B;
+    padding: 5px 0 0 5px;
+    height: 140px;
+    width: 100%;
+    position: fixed;
+}
+
+.games button {
+    height: 5%;
+    border: medium;
+    border-radius: 8px;
+    background-color: #583449;
+    color: #583449;
+}
+
+
+/* ordered list */
+
+ol.round {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.round li {
+    margin: 25px 0;
+    padding-left: 45px;
+}
+
+ol.round li.zero {
+    background: url("images/orderedList0.png") no-repeat;
+}
+
+ol.round li.one {
+    background: url("images/orderedList1.png") no-repeat;
+}
+
+ol.round li.two {
+    background: url("images/orderedList2.png") no-repeat;
+}
+
+ol.round li.three {
+    background: url("images/orderedList3.png") no-repeat;
+}
+
+ol.round li.four {
+    background: url("images/orderedList4.png") no-repeat;
+}
+
+ol.round li.five {
+    background: url("images/orderedList5.png") no-repeat;
+}
+
+ol.round li.six {
+    background: url("images/orderedList6.png") no-repeat;
+}
+
+ol.round li.seven {
+    background: url("images/orderedList7.png") no-repeat;
+}
+
+ol.round li.eight {
+    background: url("images/orderedList8.png") no-repeat;
+}
+
+ol.round li.nine {
+    background: url("images/orderedList9.png") no-repeat;
+}
+
+
+/* page titles */
+
+hgroup.title {
+    /*margin-bottom: 10px;*/
+}
+
+hgroup.title h1,
+hgroup.title h2 {
+    display: inline;
+    color: #333;
+}
+
+hgroup.title h2 {
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+
+/*Automatic slideshow */
+
+.mySlides {
+    display: none
+}
+
+
+/*Slideshow container*/
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+/*Caption Text*/
+
+.captionText {
+    color: dimgrey;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Number text*/
+
+.numberText {
+    color: dimgray;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dot points */
+
+.dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/*On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .captionText {
+        font-size: 11px
+    }
+}
